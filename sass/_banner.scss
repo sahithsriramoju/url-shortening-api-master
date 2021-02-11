@@ -1,0 +1,232 @@
+.banner{
+    position: relative;
+    //flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15rem;
+    @include media($lg){
+        //flex-direction: row;
+        padding:5rem 0rem 2rem 0rem;
+    }
+}
+/*.banner .container{
+    
+    padding-right:0rem!important;
+    margin-right:0rem!important;
+}*/
+.banner-flex{
+    display: flex;
+    flex-direction: column;
+    @include media($lg){
+        flex-direction: row;
+    }
+}
+.banner-bg{
+    @include prdb;
+   // width:100%;
+   height:350px;
+    
+    overflow: hidden;
+    svg{
+        position: absolute;
+        top:0;
+        right:-125px;
+
+        
+        
+    }
+    @include media($sm){
+        padding-bottom: 2.5rem;
+        height:100vh;
+    }
+    @include media($lg){
+        width:50%;
+        order:2;
+    }
+}
+.banner-text{
+    //padding:15px 15px 0px 15px;
+    padding:1.5rem 1.5rem 1.5rem 1.5rem;
+    font-family: $font-family;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1{
+        font-size: 3.5rem;
+        font-weight:$font-weight-2;
+        color:$dark-violet;
+        line-height: 1;
+        padding-bottom: 15px;
+        @include media($lg){
+            font-size:7.5rem;
+        }
+    }
+    p{
+        font-size:1.6rem;
+        font-weight: $font-weight-1;
+        color:$grayish-violet;
+        padding-bottom: 10px;
+        @include media($lg){
+            font-size:1.8rem;
+        }
+    }
+    @include media($sm){
+        padding: 5.5rem 7.5rem 1.5rem 7.5rem;
+    }
+    @include media($lg){
+        order:1;
+        width:50%;
+        text-align: start;
+        padding:1.5rem 7.5rem 1.5rem 7.5rem;
+    }
+}
+.banner-link{
+    position:absolute;
+    z-index:10;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-8rem;
+    width:88%;
+    background-image: url('/images/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: $very-dark-blue;
+    background-position: top -4rem right -4rem;
+    //margin:0 18px;
+    font-family: $font-family;
+   padding:2.5rem;
+    border-radius:10px;
+
+    @include media($md){
+        
+        background-image: url('/images/bg-shorten-desktop.svg');
+        background-position: top 0rem right 0rem;
+        padding:4.5rem;
+        order:3;
+    }
+    @include media($lg){
+        width:80%;
+    }
+    
+    
+   
+}
+#shorten-link-form{
+    width:100%;
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    @include media($md){
+        flex-direction: row;
+    }
+}
+.shorten-link{   
+    align-self: center;
+    padding:1.2rem 0rem 1.2rem 1.5rem;
+   // padding:1.5rem 1rem;
+   font-family: inherit;
+    border-radius: 5px;
+    border:none;
+    //width:22.2rem;
+    width:100%;
+    margin-bottom: 1.5rem;
+    outline:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    appearance: none;
+    background-color:white;
+    text-decoration: none;
+    
+    @include media($md){
+        flex-grow:1;
+        margin-bottom:0;
+        margin-right:2.5rem;
+        width:76%;
+        padding:2rem 0rem 2rem 1.5rem;
+    }
+
+}
+.shorten-link::-webkit-input-placeholder, .shorten-link::-moz-placeholder, .shorten-link::-ms-input-placeholder{
+    color: $grayish-violet;
+    font-size:3rem;
+    font-weight: $font-weight-1;
+    font-family: inherit;
+    opacity: 1;
+}
+.shorten-link-error{
+    display: none;
+}
+
+.shorten-link-error-visible{
+    position: absolute;
+    bottom:6.5rem;
+    display: block;
+    color:$red;
+    font-style: italic;
+    font-size:1rem;
+    @include media($md){
+        bottom:-2.2rem;
+        font-size:1.3rem
+    }
+}
+.border-red{
+    border:3px solid $red;
+}
+.shorten-result-container{
+    position: relative;
+    top:-7rem;
+    width:88%;
+    left:50%;
+    transform:translateX(-50%);
+    @include media($laptop){
+        width:80%
+    }
+}
+.shorten-result{
+    background-color: white;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+
+    @include media($lg){
+        flex-direction: row;
+        align-items:center;
+        padding:1rem 2.5rem;
+    }
+   
+    border-radius:5px;
+    margin-top:1.5rem;
+    padding:1.5rem;
+}
+.shorten-url{
+    color:$dark-violet;
+    font-size:1.5rem;
+    font-weight:500;
+    padding-bottom: 1rem;
+    @include media($lg){
+        margin-right:auto;
+        font-size:1.8rem;
+        padding-bottom: 0rem;
+    }
+    
+}
+.shortened-url{
+    color:$cyan;
+    text-decoration: none;
+    font-size:1.5rem;
+    font-weight:500;
+    padding: 1rem 0rem;
+    @include media($lg){
+        font-size:1.8rem;
+        margin-right: 2.5rem;
+    }
+}
+.shorten__accent-line{
+    background-color:  $grayish-violet;
+    height: 1px;
+    opacity:0.5;
+    margin: 0rem -1.5rem;
+}

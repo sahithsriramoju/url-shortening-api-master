@@ -1,0 +1,87 @@
+.btn{
+    outline: none;
+    border:none;
+    background-color: $cyan;
+    border-radius: 75px;
+    color:white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: $font-family;
+    
+}
+.signup-btn{
+    height:3.5rem;
+    width:80%;
+    align-self:center;
+    margin:10px 20px;
+    &:hover,
+    &:active{
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    @include media($lg){
+        font-size: 1.5rem;
+        width:11rem;
+        height:4.5rem
+    }
+}
+.banner-btn{
+    padding:10px 35px;
+    margin-top:15px;
+    align-self: center;
+    &:hover,
+    &:active{
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    @include media($lg){
+        align-self:start;
+    }
+}
+.shorten-btn{
+    //padding:10px 80px;
+    width:100%;
+    height:4.5rem;
+    border-radius: 5px;
+    align-self: center;
+    @include media($md){
+        width:20%;
+        height:6.2rem;
+        margin-left:auto;
+    }
+    &:hover,
+    &:active{
+        //transform:translateY(-10px);
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+}
+.boost-btn{
+    align-self:center;
+}
+.shorten-btn-copy{
+    outline: none;
+    border:none;
+    background-color: $cyan;
+    color:white;
+    width:100%;
+    height:3.5rem;
+    border-radius:5px;
+    font-size:1.5rem;
+    font-weight:700;
+    &:active,
+    &:focus,
+    &:visited{
+        cursor:pointer;
+        background-color: $dark-violet;
+    }
+    &:hover{
+        cursor:pointer;
+        opacity:0.5;
+    }
+    @include media($lg){
+        width:10.5rem;
+        height:4rem;
+    }
+}

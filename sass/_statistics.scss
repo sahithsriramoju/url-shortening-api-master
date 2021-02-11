@@ -1,0 +1,119 @@
+.statistics{
+    background-color: $neutral-gray;
+    position: relative;
+    padding:15rem 0rem 12rem 0rem;
+    h2{
+        color:$very-dark-blue;
+        font-size: 2.8rem;
+        font-weight:$font-weight-2;
+        margin:1.5rem 0px;
+        @include media($lg){
+            font-size:3.5rem;
+        }
+        @include media($xl){
+            font-size:4.5rem;
+        }
+    }
+   
+}
+.statistics-p{
+    font-size:1.6rem;
+    font-weight: $font-weight-1;
+    color:$grayish-violet;
+    margin:1.5rem 0px;
+    @include media($lg){
+        font-size: 1.8rem;
+    }
+    @include media($xl){
+        font-size: 2rem;
+    }
+}
+.statistics-header{
+    margin-bottom:8.5rem;
+    text-align:center;
+    @include media($lg){
+        //padding:1.5rem 19.5rem;
+        width:52%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+.cards{
+    @include prdf;
+    flex-direction: column;
+    align-items:center;
+    @include media($lg){
+        flex-direction:row;
+    }
+}
+.card{
+    @include prdf;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    &:not(:last-of-type){
+        margin-bottom: 10rem;
+    }
+    
+    @include media($lg){
+        
+        &:not(:last-of-type){
+            margin-right:5rem;
+            margin-bottom: 0rem;
+        }
+        &:nth-last-of-type(2){
+           // margin-top:7.5rem;
+           top:24px;
+        }
+        &:last-of-type{
+           // margin-top:15.5rem;
+           top:55px;
+        }
+    }
+    h3{
+        font-size: 2.2rem;
+        font-weight: $font-weight-2;
+        color:$very-dark-blue;
+        @include media($lg){
+            font-size: 2.5rem;
+        }
+    }
+    p{
+        font-size: 1.5rem;
+        font-weight: $font-weight-1;
+        color:$grayish-violet;
+        @include media($lg){
+            font-size:1.6rem;
+        }
+    }
+}
+.card-icon{
+    background-color:$dark-violet;
+    border-radius: 50%;
+    padding:2rem;
+    position: absolute;
+    top:-4rem;
+    @include media($lg){
+        left:3rem;
+    }
+}
+.card-text{
+    padding:8rem 2.5rem 2.5rem 2.5rem;
+    text-align:center;
+    @include media($lg){
+        padding:7rem 4rem 2.5rem 3.5rem;
+        text-align: start;
+    }
+}
+.accent-line{
+    background-color: $cyan;
+    height:100%;
+    width:8px;
+    position: absolute;
+
+    @include media($lg){
+        width:100%;
+        height:8px;
+        top:60%;
+    }
+}

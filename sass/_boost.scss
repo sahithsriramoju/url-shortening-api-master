@@ -1,0 +1,24 @@
+.boost{
+    @include prdf;
+    flex-direction: column;
+    text-align: center;
+    background-image: url('/images/bg-boost-mobile.svg');
+    background-color:$dark-violet;
+    background-repeat: no-repeat;
+    background-position: top 0 right 0;
+    background-size:cover;
+    padding:10rem 0rem;
+    @include media($lg){
+        background-image: url('/images/bg-boost-desktop.svg');
+        padding:5rem 0rem;
+    }
+    h3{
+        font-family: $font-family;
+        font-size:2.5rem;
+        font-weight:$font-weight-2;
+        color:white;
+        @include media($lg){
+            font-size:3.5rem;
+        }
+    }
+}

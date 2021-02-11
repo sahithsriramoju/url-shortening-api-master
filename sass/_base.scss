@@ -1,0 +1,46 @@
+//neutral
+$font-family: Poppins;
+$font-weight-1:500;
+$font-weight-2:700;
+$font-size:18px;
+$gray:hsl(0, 0%, 75%);
+$grayish-violet: hsl(257, 7%, 63%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$very-dark-violet:  hsl(260, 8%, 14%);
+$neutral-gray:#f3f4f6;
+//secondary
+$red: hsl(0, 87%, 67%);
+
+//primary
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$laptop: 1024px;
+// $xl: 1140px;
+$xl: 1440px;
+//animation
+$transition: 0.15s ease-in-out all;
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+     //for debugging css
+    /*background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;*/
+}
+html{
+    box-sizing: border-box;
+    font-size:62.5%;
+}
+body{
+    height:100%;
+    width:100%;
+    font-family:$font-family,sans-serif;
+    overflow-x: hidden;
+}

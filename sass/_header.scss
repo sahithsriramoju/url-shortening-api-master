@@ -1,0 +1,140 @@
+.header{
+    @include prdf;
+    //width:100%;
+    height:100px;
+    flex-direction: column;
+    padding-left:20px;
+    padding-right:20px;
+    .header__logo{
+        order:1;
+    }
+    .navigation{
+        order:2;
+    }
+    .header__auxilliaries{
+        order:3;
+    }
+    @include media($lg){
+        flex-direction: row;
+        padding-left:7.5rem;
+        padding-right:7.5rem;
+    }
+}
+.header__logo{
+    @include prdb;
+    //width:100%;
+    padding-top:40px;
+    padding-bottom: 22px;
+    //padding-left:20px;
+    height:100px;
+}
+.header__logo a{
+    @include prdib;
+    width: 121px;
+    height:33px;
+}
+.header__logo svg{
+    @include prdb;
+    width:121px;
+    height:33px;
+    fill:$very-dark-violet;
+}
+.header__burger{
+    @include padb;
+    top:0;
+    right:0;
+    height:100px;
+    width:52px;
+
+    @include media($lg){
+        display: none;
+    }
+}
+.header__burger--layer,
+.header__burger--layer::before,
+.header__burger--layer::after{
+    @include padb;
+    content:'';
+    width:25px;
+    height: 3px;
+    border-radius: 2px;
+    background-color:$grayish-violet;
+    transform-origin: 50% 50%;
+    transition: $transition;
+}
+.header__burger--layer{
+    top:50px;
+    right:20px;
+    transition: 0.1s ease-in-out all;
+    .menu-visible &{
+        background-color: transparent;
+    }
+}
+.header__burger--layer::before{
+    top:-8px;
+    .menu-visible &{
+            transform: translateY(8px) rotate(45deg);
+    }
+}
+.header__burger--layer::after{
+    top:8px;
+    .menu-visible &{
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.navigation,
+.header__auxilliaries{
+    opacity: 0;
+    visibility: hidden;
+    transform:translateY(0px);
+    transition: $transition;
+    @include media($lg){
+        opacity: 1;
+        visibility: visible;
+        transform:translateY(0px)
+    }
+    .menu-visible &{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-10px);
+    }
+}
+
+.header__auxilliaries{
+    @include prdf;
+    @include unstyledlist;
+    background-color: $dark-violet;
+    flex-direction: column;
+    font-size: 1.8rem;
+    font-weight:700;
+    font-family: $font-family;
+    z-index:9999;
+    //margin-left:20px;
+    //margin-right:20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left:2.5rem;
+    padding-right:2.5rem;
+    @include media($lg){
+        flex-direction: row;
+        background-color: transparent;
+        margin-left:auto;
+        font-size:1.5rem;
+    }
+    >a{
+        color:white;
+        text-decoration: none;
+        padding-top:10px;
+        padding-bottom: 10px;
+        @include media($lg){
+            color:$grayish-violet;
+            padding:0 15px;
+        }
+       &:hover{
+           text-decoration: none;
+       }
+    }
+}

@@ -1,0 +1,42 @@
+@mixin prdf {
+    position: relative;
+    display: flex;
+}
+@mixin padf{
+    position:absolute;
+    display:flex;
+}
+@mixin padb {
+    position: absolute;
+    display:block;
+}
+@mixin prdb {
+    position: relative;
+    display: block;
+}
+
+@mixin prdib {
+    position: relative;
+    display: inline-block;
+}
+@mixin unstyledlist {
+    list-style: none;
+    list-style-type: none;
+    vertical-align: baseline;
+    padding:0;
+    margin:0;
+    border:0;
+    li{
+        list-style: none;
+        list-style-type: none;
+        vertical-align: baseline;
+        padding: 0;
+        margin:0;
+        border:0;
+    }
+}
+@mixin media($media-query) {
+    @media screen and (min-width:$media-query){
+        @content
+    }
+}

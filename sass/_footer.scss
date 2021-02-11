@@ -1,0 +1,111 @@
+.footer{
+    background-color:$very-dark-violet;
+    padding:7.5rem 0rem;
+    
+    &__logo {
+        margin-bottom: 3.5rem;
+        text-align: center;
+        @include media($sm){
+            text-align: start;
+        }
+        @include media($lg){
+            width:60%;
+        }
+        @include media($xl){
+            width:75%;
+        }
+    }
+
+    h4{
+        font-family: $font-family;
+        font-size: 1.5rem;
+        font-weight: $font-weight-2;
+        color:white;
+        margin-bottom: 2.5rem;
+        @include media($xl){
+            font-size: 1.8rem;
+        }
+    }
+}
+.footer__content{
+    //padding:1rem 1.5rem;
+    //text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    @include media($sm){
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: start;
+    }
+    
+}
+.footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    @include media($lg){
+        flex-direction: row;
+        align-items: start;
+    }
+}
+.footer__tree{
+    @include prdb;
+    @include unstyledlist;
+    a:link,
+    a:visited{
+        text-decoration: none;
+        color: $gray;
+        font-family: $font-family;
+        font-size:1.5rem;
+        font-weight:$font-weight-1;
+        @include media($xl){
+            font-size:1.6rem;
+        }
+    }
+    a:hover,
+    a:active{
+        color:$cyan;
+        cursor:pointer;
+    }
+}
+
+.footer__tree li{
+margin-bottom: 1rem;
+}
+.footer__tree{
+    margin-bottom: 4.5rem;
+    @include media($lg){
+        margin-bottom: 0;
+    }
+}
+.footer__social{
+    @include media($lg){
+        margin-left:8rem;
+    }
+    @include media($xl){
+        margin-left:10.5rem;
+    }
+}
+.footer__social--list{
+    @include prdf;
+    @include unstyledlist;
+    justify-content: center;
+
+}
+.footer__social--icon:not(:last-of-type){
+    margin-right:1.5rem;
+}
+.footer__social--icon{
+    a:hover,
+    a:active{
+        cursor: pointer;
+        svg{
+        *{
+        fill:$cyan;
+        }
+    }
+    }
+}
